@@ -30,8 +30,9 @@ Three methods were employed for further analysis. First, the Augmented Dickey-Fu
 Table 1 shows the result of the raw data collection and cleaning. “Before” and "After” columns indicate the total number of tweets obtained before and after the data cleaning. The differences are assumed to be due to bot-made tweets, in accordance with the previ-ous study (Kraaijeveld & De Smedt, 2020). Overall, 786,819 usable tweets were obtained for further analysis.
 
 Table 1. Descriptive analytics summary
+
 | Token | Before | After | Changes | Changes % |  
-|-----------|:-----------:|-----------:|-----------:|-----------:|  
+|-----------|:-----------:|:-----------:|:-----------:|:-----------:|  
 | ADA | 114,876 | 104,574 | 10,302 | 8.97% |  
 | BNB | 121,670	| 97,365	| 24,305 | 19.98% | 
 | BTC | 120,486	| 108,888	| 11,598 | 9.63% |
@@ -46,9 +47,33 @@ Table 2 shows the results of the ADF and the Johansen Cointegration test. If the
 
 Table 2. ADF and Johansen Cointegration test summary
 
+| Token | ADF Stat | Critical Value (5%) | Hypothesized Number of <br> Cointegration Equation | Number of <br> Cointegration |  
+|-----------|:-----------:|:-----------:|:-----------:|:-----------:|  
+| ADA | -7.520970* | -2.885450 | None*, At most 1, At most 2 | 1 |  
+| BNB | -5.554652*	| -2.885654	| None*, At most 1, At most 2* | 1 | 
+| BTC | -8.357328*	| -2.885450	| None*, At most 1*, At most 2* | 3 |
+| DOGE | -9.243754* | -2.885450 | None, At most 1, At most 2* |	0 |
+| DOT | -4.938653* | -2.885450 |	None*, At most 1, At most 2	| 1 |
+| ETH | -9.880896* |	-2.885450 | None*, At most 1*, At most 2*	| 3 | 
+| LINK | -7.265064* | -2.885450	| None*, At most 1, At most 2* | 1 |
+| UNI | -5.017657* | -2.885654	| None*, At most 1, At most 2*	| 1 |
+| XRP | -9.318135*	| -2.885450	| None*, At most 1*, At most 2* | 3 |
+
 Lastly, Table 3 shows the results of the Granger causality method, which investigates the predictive relationship between two variables. The three variables used were sentiment (St), price (Pt), and volume (Vt). Each of them was tested using the Granger causality test at a 1 to 5-period lag. As presented in Table 3, there was not a causal or predictive rela-tionship between price and sentiment or sentiment and price in all cryptocurrencies. Simul-taneously, there might be a causal or predictive relationship between sentiment and vol-ume in ADA, BTC, DOGE, DOT, and XRP.
 
 Table 3. Granger causality test summary
+
+| Token | Pt -> St | St -> Pt | Vt -> St | St -> Vt |  
+|-----------|:-----------:|:-----------:|:-----------:|:-----------:|
+| ADA | No | No | Yes, lag (5) | No |  
+| BNB | No	| No	| No | No | 
+| BTC | No	| No	| No | Yes, lag (5) |
+| DOGE | No | No | Yes, lag (1-5) |	Yes, lag (2) |
+| DOT | No | No |	No	| Yes, lag (4-5) |
+| ETH | No |	No | No	| No | 
+| LINK | No | No	| No | No |
+| UNI | No | No	| No	| No |
+| XRP | No	| No	| No | Yes, lag (3-4) |
 
 ## Conclusion
 In conclusion, the results of the study do not show any significant relationships between Twitter sentiments and price changes. However, a significant result was observed in the predictive capability of sentiment to predict transaction volume changes for BTC, DOGE, DOT, and XRP. Conversely, the results indicate that volume changes have the capabilities of predicting sentiment changes for ADA and DOGE.
@@ -56,3 +81,17 @@ In conclusion, the results of the study do not show any significant relationship
 These results differ from the previous study on Twitter sentiment analysis and the cryp-tocurrency market. The discrepancy could be caused by the different market conditions, indicating that retail investors in Twitter no longer have significant influence over price changes in the cryptocurrency market. Furthermore, this could be due to the significant presence of institutional investors, who can be regarded as more rational than retail investors, as they tend to hold their investment positions despite the price and volume fluctua-tions (Sun et al., 2021).
 
 The results of this study might benefit traders and institutional investors for research fo-cused on the latest analysis of trading strategies using Twitter sentiment analysis. Future research might benefit from implementing supervised machine learning to enhance predictive capabilities for more advanced trading strategies. 
+
+## References
+- Alexander, C., & Heck, D. F. (2020). Price discovery in Bitcoin: The impact of unregulated markets. Journal of Financial Stability, 50, 100776. https://doi.org/10.1016/j.jfs.2020.100776
+- Bollen, J., Mao, H., & Zeng, X. (2011). Twitter mood predicts the stock market. Journal of Computational Science, 2(1), 1–8. https://doi.org/10.1016/j.jocs.2010.12.007
+- CoinMarketCap. (2021). Cryptocurrency prices, charts and market capitalizations. https://coinmarketcap.com/
+- Dickey, D. A., & Fuller, W. A. (1979). Distribution of the estimators for autoregressive time series with a unit root. Journal of the American Statistical Association, 74(366), 427. https://doi.org/10.2307/2286348
+- Engle, R. F., & Granger, C. W. J. (1987). Co-integration and error correction: Representation, estimation, and testing. Econometrica, 55(2), 251–276. https://doi.org/10.2307/1913236
+- Hutto, C., & Gilbert, E. (2014). VADER: A parsimonious rule-based model for sentiment analysis of social media text. Proceedings of the International AAAI Conference on Web and Social Media, 216–225. https://ojs.aaai.org/index.php/ICWSM/article/view/14550
+- Johansen, S. (1988). Statistical analysis of cointegration vectors. Journal of Economic Dynamics and Control, 12(2–3), 231–254. https://doi.org/10.1016/0165-1889(88)90041-3
+- Kraaijeveld, O., & De Smedt, J. (2020). The predictive power of public Twitter sentiment for forecasting cryptocurrency prices. Journal of International Financial Markets, Institutions and Money, 65, 101188. https://doi.org/10.1016/j.intfin.2020.101188
+- Li, T., Van Dalen, J., & Van Rees, P. J. (2018). More than just noise? Examining the information content of stock microblogs on financial markets. Journal of Information Technology, 33(1), 50–69. https://doi.org/10.1057/s41265-016-0034-2
+- Mai, F., Bai, Q., Shan, Z., Wang, X. (Shane), & Chiang, R. H. L. (2018). How does social media impact bitcoin value? A test of the silent majority hypothesis. Journal of Management Information Systems, 35(1), 19–52. https://doi.org/10.2139/ssrn.2545957
+- Nakamoto, S. (2008). Bitcoin: A peer-to-peer electronic cash system. www.bitcoin.org
+- Sun, W., Dedahanov, A. T., Shin, H. Y., & Li, W. P. (2021). Factors affecting institutional investors to add crypto-currency to asset portfolios. The North American Journal of Economics and Finance, 58, 101499. https://doi.org/10.1016/j.najef.2021.101499

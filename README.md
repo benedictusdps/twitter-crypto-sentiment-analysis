@@ -1,6 +1,6 @@
 # Twitter sentiment analysis for price and transaction volume changes in the cryptocurrency market
 
-B.D.P. See & M. Ulpah
+B.D.P. See & M. Ulpah <br>
 University of Indonesia, Jakarta, Indonesia
 
 ## Table of Contents

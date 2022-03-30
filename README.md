@@ -1,5 +1,14 @@
 # Twitter sentiment analysis for price and transaction volume changes in the cryptocurrency market
 
+# Table of Contents
+1. [Abstract](#Abstract)
+1. [Introduction](#Introduction)
+1. [Literature Review](#Literature-Review)
+1. [Methodology](#Methodology)
+1. [Analysis and Discussion](#Analysis-and-Discussion)
+1. [Conclusion](#Conclusion)
+1. [References](#References)
+
 ## Abstract
 Cryptocurrencies are rising in importance as an investment option and alternative currency. Thus, investors are keen on finding timely market movement insights. One such source is Twitter due to its live feed of information on cryptocurrencies and emotional information from investors expressing their sentiments. This article examines the extent to which Twitter sentiments can be used to predict price and transaction volume changes for the nine largest cryptocurrencies for the period of June 2021 to September 2021. This study was conducted using a lexicon-based approach through the VADER algorithm for sentiment analysis, while applying the Granger causality method to analyze the two-way predictive capabilities of each cryptocurrency’s sentiments toward their respective price and transaction volume changes. Past studies have shown that sentiment analysis may work for several cryptocurrencies, while this study only found predictive capabilities in transaction volume changes and not in price movement.
 
